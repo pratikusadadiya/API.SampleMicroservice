@@ -20,7 +20,7 @@ namespace API.SampleMicroservice.Configuration
     {
         public static void ConnectDatabase(this IServiceCollection services, IConfiguration config)
         {
-            services.AddDbContext<SampleMicroserviceContext>(options => options.UseNpgsql(config.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<SampleMicroserviceContext>(options => options.UseNpgsql(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? config.GetConnectionString("DefaultConnection")));
         }
 
         public static void AddHttpContext(this IServiceCollection services)

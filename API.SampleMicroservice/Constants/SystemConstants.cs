@@ -5,11 +5,11 @@
         #region General
         public const string ASCENDING = "ascending";
         public const string DESCENDING = "descending";
-		#endregion
+	#endregion
 
-		#region Error Codes
-		public const string DuplicateRecordCode = "23505";
-		public const string ForeignKeyViolation = "23503";
-		#endregion
+	#region Error Codes
+	public const string DuplicateRecordCode = "23505";
+	public const string ForeignKeyViolation = "23503";
+	#endregion
 	}
 }
